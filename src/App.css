@@ -39,7 +39,7 @@ body{
     margin-top: 100px;
     height:100px;
     width:550px;
-    margin: 100px auto;
+    margin: 100px auto 30px auto;
        border-radius: 12px;
   }
   input{
@@ -64,6 +64,31 @@ body{
     height:45px;
     width:75px;
     font-size:20px;
+    border-radius:6px;
+    border:none;
+  }
+  .Tasks{
+    background-color:white;
+    height:100px;
+    width:1200px;
+    margin-top:30px;
+    margin-left: 150px;
+    border-radius: 7px;
+  }
+  b{
+    font-size:20px;
+    display:inline-block;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+  .btn2{
+    color:white;
+    background-color: #D0DE55;
+    margin-left: 20px;
+    margin-top:20px;
+    height:32px;
+    width:75px;
+    font-size:16px;
     border-radius:6px;
     border:none;
   }
