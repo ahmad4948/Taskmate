@@ -83,7 +83,7 @@ body{
   }
   .btn2{
     color:white;
-    background-color: #D0DE55;
+    background-color: #0ec946;
     margin-left: 20px;
     margin-top:20px;
     height:32px;
@@ -91,4 +91,18 @@ body{
     font-size:16px;
     border-radius:6px;
     border:none;
+  }
+  .tasklist{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+        gap:50px;
+    background-color:white;
+  }
+  .card{
+    font-size:20px;
+   padding:10px;
+    background-color: #eaf4ff;
+    border-radius: 6px;
+    margin:8px;
+    height:40px;
   }
