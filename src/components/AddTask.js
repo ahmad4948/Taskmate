@@ -11,6 +11,9 @@ function AddTask(){
     function handleclear(){
         setnewlist([]);
     }  
+    function removetask(index){
+        setnewlist(newlist.filter((task,i)=>i!==index));
+    }
      return(
         <>
        <div className='add'>
@@ -25,7 +28,9 @@ function AddTask(){
 
         <div className='tasklist'>
         { newlist.map((task, index)=>(
-            <div className="card" key={index}>{task}</div>
+            <div className="card" key={index}>{task}
+            <img src="bin.PNG" className='bin' onClick={()=>removetask(index)}></img>
+            </div>
          ))
         }
         </div>

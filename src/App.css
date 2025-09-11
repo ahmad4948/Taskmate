@@ -69,7 +69,6 @@ body{
   }
   .Tasks{
     background-color:white;
-    height:100px;
     width:1200px;
     margin-top:30px;
     margin-left: 150px;
@@ -93,16 +92,26 @@ body{
     border:none;
   }
   .tasklist{
+    min-height: 40px;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-        gap:50px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap:50px;
     background-color:white;
+    border-radius: 4px;
   }
   .card{
+    display:flex;
+    justify-content: space-between;
     font-size:20px;
    padding:10px;
     background-color: #eaf4ff;
     border-radius: 6px;
     margin:8px;
-    height:40px;
+    height: 40px;
+    word-break: break-word;
+  }
+  .bin{
+    width:15px;
+    height:auto;
+    cursor:pointer;
   }
