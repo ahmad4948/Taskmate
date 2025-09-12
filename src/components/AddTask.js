@@ -2,10 +2,17 @@ import React, { useState } from 'react';
 function AddTask(){
     const [newtask,setnewtask] = useState("");
     const [newlist,setnewlist] = useState([]);
+    const [editindex,seteditindex] = useState(null);
 
     function add(e){
         e.preventDefault();
+        if(editindex!==null){
+           setnewlist(newlist.map((task,i)=> i===editindex?newtask:task));
+           seteditindex(null);
+        }
+        else{
         setnewlist( [...newlist, newtask]);
+        }
         setnewtask("");
     }
     function handleclear(){
@@ -28,8 +35,16 @@ function AddTask(){
 
         <div className='tasklist'>
         { newlist.map((task, index)=>(
-            <div className="card" key={index}>{task}
+            <div className="card" key={index}>
+            <span>{task}</span>
+            <div className='icons'>
+            <img className="edit" src="edit.PNG" onClick={()=>{
+                setnewtask(task);
+                seteditindex(index);
+            }}></img>
             <img src="bin.PNG" className='bin' onClick={()=>removetask(index)}></img>
+            </div>
+
             </div>
          ))
         }
