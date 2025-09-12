@@ -6,6 +6,9 @@ function AddTask(){
 
     function add(e){
         e.preventDefault();
+        if(!newtask.trim()){
+            return;
+        }
         if(editindex!==null){
            setnewlist(newlist.map((task,i)=> i===editindex?newtask:task));
            seteditindex(null);
