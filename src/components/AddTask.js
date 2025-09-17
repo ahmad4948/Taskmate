@@ -41,11 +41,11 @@ function AddTask(){
             <div className="card" key={index}>
             <span>{task}</span>
             <div className='icons'>
-            <img className="edit" src="edit.PNG" onClick={()=>{
+            <img className="edit" src="edit.PNG" alt="edit button" onClick={()=>{
                 setnewtask(task);
                 seteditindex(index);
             }}></img>
-            <img src="bin.PNG" className='bin' onClick={()=>removetask(index)}></img>
+            <img src="bin.PNG" className='bin' alt="delete button" onClick={()=>removetask(index)}></img>
             </div>
 
             </div>

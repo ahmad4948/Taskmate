@@ -13,7 +13,7 @@ function Header(){
 
     return(
       <header>
-       <img src="banana.JPG" className="banana"/>
+       <img src="banana.JPG" alt="banana pic" className="banana"/>
         <h1>Taskmate</h1>
         <button className={dark? "white":"black"} onClick={()=>setdark(d =>!d)}>
         
