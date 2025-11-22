@@ -29,7 +29,7 @@ function AddTask(){
        <div className='add'>
        <form onSubmit={add}>
         <input value={newtask} onChange={e=>setnewtask(e.target.value)}   placeholder='add task'></input>
-        <button  onClick={add}>Add</button>  
+        <button  onClick={add} class="addbtn">Add</button>  
         </form>
        </div>
        <div className='Tasks'>
